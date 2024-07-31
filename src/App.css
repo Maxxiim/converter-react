@@ -1,0 +1,81 @@
+::after,
+::before {
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    padding: 0 15px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.converter {
+    display: flex;
+    gap: 30px;
+}
+
+.budget,
+.buying {
+    padding: 0 15px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+}
+
+.budget__text,
+.buying__text {
+    padding: 0;
+    margin: 10px 0 10px 0;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+.currency-list {
+    padding: 0;
+    margin: 0 0 10px 0;
+    gap: 20px;
+    display: flex;
+}
+
+.currency-list__item {
+    cursor: pointer;
+    display: flex;
+    text-align: center;
+    list-style: none;
+    border: 1px solid black;
+    padding: 0 13px;
+}
+
+.currency-list__item.active {
+    color: white;
+    background: rgb(16, 147, 136);
+}
+
+.currency-list__item:hover {
+    color: white;
+    background: rgb(16, 147, 136);
+}
+
+.budget-input,
+.buying-input {
+    padding: 10px 0 0 0;
+    margin: 0;
+}
+
+.budget-input__field,
+.buying-input__field {
+    border: none;
+}
+
+input {
+    outline: 0 !important;
+}
+
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
