@@ -14,10 +14,10 @@ const Budget = ({ currency, setFromCurrency, fromPrice, changeFromPrice }) => {
                         {
                             defaultCurrencies.map((cur) => (
                                 <li key={cur}
-                                    onClick={() => setFromCurrency(cur)}
+                                    onClick={() => setFromCurrency(cur, console.log(cur))}
                                     className={currency === cur ?
-                                        'currency-list__item active' : 'currency-list__item'
-                                    }>
+                                        'currency-list__item active'
+                                        : 'currency-list__item'}>
                                     {cur}
                                 </li>
                             ))

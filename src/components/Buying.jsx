@@ -13,10 +13,12 @@ const Buying = ({ toPrice, currency, setToCurrency, changeToPrice }) => {
                     {
                         defaultCurrency.map(cur =>
                             <li key={cur}
-                                onClick={() => setToCurrency(cur)}
+                                onClick={() => setToCurrency(cur, console.log(cur))}
                                 className={currency === cur ?
-                                    "currency-list__item active" : "currency-list__item"
-                                }>{cur}</li>
+                                    "currency-list__item active"
+                                    : "currency-list__item"}>
+                                {cur}
+                            </li>
                         )
                     }
                 </ul>

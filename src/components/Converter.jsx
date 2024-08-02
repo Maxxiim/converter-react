@@ -9,16 +9,30 @@ const Converter = () => {
 
     const [fromPrice, setFromPrice] = useState(0);
     const [fromCurrency, setFromCurrency] = useState('RUB');
-
     const [toPrice, setToPrice] = useState(0);
     const [toCurrency, setToCurrency] = useState('USD');
 
+
     const changeFromPrice = (value) => {
-        setFromPrice(value)
+        setFromPrice(value);
+        if (fromCurrency === toCurrency) {
+            setToPrice(value);
+        } else {
+            const price = value * rates[fromCurrency];
+            console.log(value * rates[fromCurrency])
+            const result = price * rates[toCurrency]
+            setToPrice(result.toFixed(6));
+        }
     }
 
     const changeToPrice = (value) => {
-        setToPrice(value)
+        setToPrice(value);
+        // if (toCurrency === fromCurrency) {
+        //     setFromPrice(value)
+        // } else {
+        //     let price = value * rates[fromCurrency]
+        //     setFromPrice(price)
+        // }
     }
 
     useEffect(() => {
